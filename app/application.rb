@@ -7,7 +7,7 @@ class Application
     if req.path.match(/items/)
       do the thing
     else
-      
+      resp.write
     end
   end
   
