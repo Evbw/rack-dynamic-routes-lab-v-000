@@ -7,6 +7,7 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
+      item = Item.name
       resp.write "#{item.name}, #{item.price}"
     else
       resp.write "Route not found"
