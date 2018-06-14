@@ -8,7 +8,7 @@ class Application
     
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      if item == @@items.find( | item | item.name = item.name)
+      if item == @@items.find( | item | item.name = item)
         resp.write "#{@@items.name}, #{@@items.price}"
       else
         resp.status = 400
