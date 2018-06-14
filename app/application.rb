@@ -8,7 +8,7 @@ class Application
     
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      if req.path == "#{@@items.name}"
+      if item == 
         resp.write "#{@@items.name}, #{@@items.price}"
       else
         resp.status = 400
