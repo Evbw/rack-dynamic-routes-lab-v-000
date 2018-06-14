@@ -8,8 +8,8 @@ class Application
     
     if req.path.match(/items/)
       item = @@items
-      if req.path == "#{item.name}"
-        resp.write "#{item.name}, #{item.price}"
+      if req.path == "#{@@items.name}"
+        resp.write "#{@@items.name}, #{@@items.price}"
       else
         resp.status = 400
         resp.write "Item not found"
