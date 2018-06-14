@@ -8,7 +8,7 @@ class Application
       do the thing
     else
       resp.write "Route not found"
-      resp.status = '40'
+      resp.status = 404
     end
   end
   
