@@ -7,7 +7,7 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
-      item = Item.name
+      item = @@items
       resp.write "#{item.name}, #{item.price}"
     else
       resp.status = 404
