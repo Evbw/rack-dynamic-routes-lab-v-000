@@ -8,6 +8,7 @@ class Application
     
     if req.path.match(/items/)
       item = @@items
+      
       resp.write "#{item.name}, #{item.price}"
     elsif
       resp.status = 400
